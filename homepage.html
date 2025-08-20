@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🏏 BookWise | Sports & Games Booking 🏟️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      scroll-padding-top: 90px; /* Prevent content hiding under navbar */
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+    }
+
+    #bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+
+    .navbar {
+      background-color: rgba(0, 74, 173, 0.8);
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, #ffffff, #00c6ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 100px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content-box {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 800px;
+      width: 90%;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .hero {
+      height: 100vh;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .login-button {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #004aad;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .login-button:hover {
+      background-color: #dcdcdc;
+      transform: scale(1.05);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    ul, p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 74, 173, 0.9);
+      color: white;
+      backdrop-filter: blur(10px);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bgVideo">
+    <source src="video1.mp4" type="video/mp4" />
+  </video>
+
+  <nav class="navbar">
+    <div class="logo">🏏 BOOKWISE 🏟️</div>
+    <ul class="nav-links">
+      <li><a href="#home">🏠 Home</a></li>
+      <li><a href="#about">ℹ️ About</a></li>
+      <li><a href="#features">🚀 Features</a></li>
+      <li><a href="#calendar">🗓️ Calendar</a></li>
+      <li><a href="#reviews">💬 Reviews</a></li>
+      <li><a href="#contact">📞 Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="content-box">
+      <h1>🎮 Welcome to Sports & Games Booking</h1>
+      <p>📌 Book Football, Badminton and more in one click!</p>
+      <a href="login.html" class="login-button">🔐 Login</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="content-box">
+      <h2>ℹ️ About Us</h2>
+      <p>🏃‍♂️ At <strong>BookWise</strong>, we connect players with playgrounds effortlessly. From Football to Badminton, booking is just one click away.</p>
+      <p>🤝 We support a community of sports lovers, teams, and individual players looking for seamless access to sports facilities.</p>
+      <p>🧠 With AI features, mobile integration, and smart recommendations — you're in control of your game schedule.</p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="content-box">
+      <h2>🧹 New Features & Ideas</h2>
+      <ul>
+        <li>🗓️ Live match scheduling and booking calendar</li>
+        <li>📱 Mobile app support (coming soon!)</li>
+        <li>🌟 Player reviews & performance tracking</li>
+        <li>🎯 AI-based slot suggestions</li>
+        <li>📊 Stats dashboard for players</li>
+        <li>🔐 Secure login/logout system</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="calendar">
+    <div class="content-box">
+      <h2>🗓️ Booking Calendar Preview</h2>
+      <p>⚽ Football – Available: 5PM–8PM</p>
+      <p>🎸 Badminton – Available: 10AM–1PM</p>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="content-box">
+      <h2>💬 User Reviews</h2>
+      <p><strong>Shivani K:</strong> "👍 Loved how easy it was to book the court. The team feature is amazing!"</p>
+      <p><strong>Rahul D:</strong> "✅ Booking confirmed instantly, very convenient for weekend play."</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="content-box">
+      <h2>📞 Contact Admin</h2>
+      <p><strong>👤 Name:</strong> Mr. Manikandan S, Mr. Deepankumar M</p>
+      <p><strong>📧 Email:</strong> <a href="mailto:admin@sportsbooking.com">admin@sportsbooking.com</a></p>
+      <p><strong>📱 Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a>, <a href="tel:+919037233767">+91 90372 33767</a></p>
+      <p><strong>📍 Address:</strong> Sports Complex, Main Street, Chennai - 600001</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>©️ 2025 BookWise — Sports & Games Booking. Made with ❤️ for players.</p>
+  </footer>
+</body>
+</html>
